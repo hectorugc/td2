@@ -14,7 +14,7 @@ whereweare.insertBefore(title, child);
 let paragraph = document.createElement("p");
 paragraph.innerHTML = ("Il est interdit de vous doubler, sous peine de disqualification.");
   
-  document.getElementsByTagName("h2")[0].after(paragraph);
+document.getElementsByTagName("h2")[0].after(paragraph);
 
 
 
@@ -38,4 +38,16 @@ for (let i = 0; i < allh2.length; i++) {
   allh2[i].innerHTML = numberOfArticle.join(" ")
   console.log(allh2[i].innerHTML = numberOfArticle.join(" "));
   
+}
+
+// add color to titles and paragraphs
+for (let setColor = 0; setColor < allh2.length; setColor=setColor+2) {
+  allh2[setColor] = allh2[setColor].style.backgroundColor = "blue";
+  
+}
+
+let allParagraphs = document.getElementsByTagName("p");
+console.log(allParagraphs);
+for (let setColor2P = 0; setColor2P < allParagraphs.length; setColor2P=setColor2P+2) {
+  allParagraphs[setColor2P] = allParagraphs[setColor2P].style.backgroundColor = "blue";
 }
