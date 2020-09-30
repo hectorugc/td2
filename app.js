@@ -19,13 +19,10 @@ let textnode = document.createTextNode("Il est interdit de vous doubler, sous pe
 
 
   // Put all h2 in upper case
-  for (const key in allh2) {
-    let all;
-    all = 
-  }
-let allh2 = document.getElementsByTagName("h2")[0].innerHTML;
+  let allh2 = document.getElementsByTagName("h2");
+  console.log(allh2);
 
-console.log(allh2);
-/*
-const uppercased = textInside.map(textInside => textInside.toUpperCase());
-*/
+  for (let i = 0; i < allh2.length; i++) {
+   allh2[i].innerHTML = allh2[i].innerHTML.toUpperCase();
+  
+  }
