@@ -1,0 +1,32 @@
+<!doctype html>
+<head>
+  <style>
+    body {
+      font-family: 'Helvetica', sans-serif;
+    }
+
+    .board-cell {
+      border: 1px solid #666;
+      box-sizing: border-box;
+      display: inline-block;
+      font-size: 32px;
+      height: 100px;
+      line-height: 100px;
+      text-align: center;
+      width: 100px;
+    }
+
+    .board-cell .content {
+      display: inline-block;
+      vertical-align: middle;
+    }
+  </style>
+</head>
+<body>
+  <h1>Morpion</h1>
+  <p>Tour actuel du joueur: <span class="js-current-player"></span></p>
+  <div class="js-board"></div>
+  <button class="js-reset">Réinitialiser</button>
+  <script src="morpion.js"></script>
+</body>
+</html>
