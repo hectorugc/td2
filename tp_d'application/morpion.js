@@ -126,7 +126,7 @@
 				} else {
 					renderBoard();
 					state.gameEnded = true;
-					alert(`Player ${player} wins!`);
+					alert(`Player ${jeur1} wins!`);
 				}
 			});
 
