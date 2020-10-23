@@ -79,5 +79,5 @@ var app ={
 
     }
 }
-
+localStorage.getItem('app')
 app.init();

@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c84e853f-2d1d-45eb-97d4-dc0297305f25" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/css/styles.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/region.js" beforeDir="false" afterPath="$PROJECT_DIR$/region.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +25,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../php_cerati/week5" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.detected.package.stylelint" value="true" />
@@ -54,6 +54,7 @@
       <workItem from="1602662936087" duration="7649000" />
       <workItem from="1602859704101" duration="8130000" />
       <workItem from="1602928075555" duration="1030000" />
+      <workItem from="1603091728660" duration="41000" />
     </task>
     <servers />
   </component>
