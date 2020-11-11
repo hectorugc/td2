@@ -1,0 +1,20 @@
+{
+  "name": "tp8",
+  "version": "1.0.0",
+  "description": "",
+  "main": "exchange.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "lite-server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "eslintrc": "^1.0.6",
+    "lite-server": "^2.6.0"
+  },
+  "devDependencies": {
+    "typescript": "^4.0.5"
+  }
+}
