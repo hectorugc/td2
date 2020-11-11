@@ -4,10 +4,10 @@ var Portfolio_1 = require("./Portfolio");
 var exchangeValue = [];
 var tabledevises = document.getElementById("tabledevises");
 var inputMonney = document.getElementById("inputMonney");
-var inputmontant = document.getElementById("montant");
-var boutonajouter = document.getElementById("ajouter");
-var boutonretirer = document.getElementById("retirer");
+var inputamount = document.getElementById("amount");
 var message = document.getElementById("message");
+var addButton = document.getElementById("addButton");
+var withdrawlButton = document.getElementById("withdrawl");
 var ExchangePortfolio = new Portfolio_1.Portfolio();
 APIExhange('https://api.exchangeratesapi.io/latest', inputMonney);
 function APIExhange(url, selectCase) {
@@ -33,15 +33,13 @@ function decendAddAmount() {
     try {
         var convertionRate = exchangeValue[inputMonney.value];
         console.log(convertionRate);
-        ExchangePortfolio.addCurrencyPortfolio(parseInt(inputmontant.value), inputMonney.value, convertionRate);
-        if (ExchangePortfolio.tabportefeuille.length !== 0) {
+        ExchangePortfolio.addCurrencyPortfolio(parseInt(inputamount.value), inputMonney.value, convertionRate);
+        if (ExchangePortfolio.portfoliotabs.length !== 0) {
             tabledevises.innerHTML = "";
-            ExchangePortfolio.tabportefeuille.map(function (element) {
+            ExchangePortfolio.portfoliotabs.map(function (element) {
                 tabledevises.innerHTML += "<tr><td>" + ("" + element.curencyTypes) + "</td><td>" + ("" + element.amounts) + "</td><td>" + Math.round((element.amounts / element.rateEuro) * 100) / 100 + "</td></tr>";
             });
         }
-        // console.log("arreglo de resultado: ");
-        // console.log(portefeuille.tabportefeuille);
     }
     catch (error) {
         message.innerText = error;
@@ -51,9 +49,9 @@ function decendAddAmount() {
 function withdrawlAmount() {
     // tabledevises.innerHTML="";
     try {
-        ExchangePortfolio.retirerDeviseHorsPortefeuille(parseInt(inputmontant.value), inputMonney.value);
+        ExchangePortfolio.retirerDeviseHorsPortefeuille(parseInt(inputamount.value), inputMonney.value);
         tabledevises.innerHTML = "";
-        ExchangePortfolio.tabportefeuille.map(function (element) {
+        ExchangePortfolio.portfoliotabs.map(function (element) {
             tabledevises.innerHTML += "<tr><td>" + ("" + element.curencyTypes) + "</td><td>" + ("" + element.amounts) + "</td><td>" + Math.round((element.amounts / element.rateEuro) * 100) / 100 + "</td></tr>";
         });
     }
@@ -62,5 +60,5 @@ function withdrawlAmount() {
         return;
     }
 }
-boutonajouter.addEventListener("click", decendAddAmount);
-boutonretirer.addEventListener("click", withdrawlAmount);
+addButton.addEventListener("click", decendAddAmount);
+withdrawlButton.addEventListener("click", withdrawlAmount);
